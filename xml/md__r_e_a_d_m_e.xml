@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige)</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The package contains the nodes and the simulation environment for controlling a mobile robot in the Gazebo simulation environment.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>Table of contents</title>
+<para><itemizedlist>
+<listitem><para><ulink url="#requirements">Requirements</ulink></para>
+</listitem><listitem><para><ulink url="#general-info">General info</ulink></para>
+</listitem><listitem><para><ulink url="#description-of-the-system">Description of the system</ulink></para>
+</listitem><listitem><para><ulink url="#codes-and-nodes">Codes and nodes</ulink></para>
+</listitem><listitem><para><ulink url="#coppelia-scene">Coppelia scene</ulink></para>
+</listitem><listitem><para><ulink url="#running-the-code">Running the code</ulink></para>
+</listitem><listitem><para><ulink url="#futher-information">Futher information</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>Requirements</title>
+<para>To properly oberserve and run correctly the behaviour of the mobile robot in your machine, it&apos;s necessary to have in your linux system:<itemizedlist>
+<listitem><para>Ubuntu 20.04</para>
+</listitem><listitem><para>ROS Noetic</para>
+</listitem><listitem><para>ROS2 Foxy</para>
+</listitem><listitem><para>Python3</para>
+</listitem><listitem><para>Gazebo</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>General info</title>
+<para>This package is responsible to control a mobile robot when receives a <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput> command from the user.</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>Description of the system</title>
+<para>The launch file will open and start:<orderedlist>
+<listitem><para>The simulation environment</para>
+</listitem><listitem><para>The node <computeroutput>random_position_server</computeroutput>, which implements a random position service</para>
+</listitem><listitem><para>The node <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput>, which implements a service to drive a robot toward a point in the environment</para>
+</listitem><listitem><para>The node <computeroutput>state_machine</computeroutput>, which implements a service to start or stop the robot, and calls the other two services to drive the robot</para>
+</listitem><listitem><para>The node <computeroutput><ref refid="namespaceuser__interface" kindref="compound">user_interface</ref></computeroutput>, which asks the user to start/stop the robot, and calls the service implemented in the state_machine node</para>
+</listitem><listitem><para>The service implemented in the <computeroutput><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></computeroutput> node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)</para>
+</listitem><listitem><para>The service implemented in the <computeroutput>random_position_server</computeroutput> node replies with random values for x, y, and theta, where x and y should be limited between some min and max values</para>
+</listitem><listitem><para>The service implemented in the robot <computeroutput>state_machine</computeroutput> node gives the possibility to start or stop the robot behaviour.</para>
+</listitem></orderedlist>
+</para>
+<para>Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.</para>
+<para><image type="html" name="rosgraph.png" inline="yes"></image>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Codes e nodes</title>
+<para>In this package, at the scripts folder, it&apos;s possible to find 2 &apos;.py&apos; extension files, each one with it&apos;s own node:</para>
+<para><itemizedlist>
+<listitem><para><bold>go_to_point.py:</bold> A action server that controls the robot speed depending on random generated goal;</para>
+</listitem><listitem><para><bold>user_interface.py:</bold> A command that sends the request to <emphasis>start</emphasis> or <emphasis>stop</emphasis> the <emphasis><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref> node</emphasis></para>
+</listitem></itemizedlist>
+</para>
+<para>In this package, at the src folder, it&apos;s possible to find 2 &apos;.cpp&apos; extension files, each one with it&apos;s own node:</para>
+<para><itemizedlist>
+<listitem><para><bold><ref refid="position__service_8cpp" kindref="compound">position_service.cpp</ref>:</bold> It generates a random position for x, y and theta when requested.</para>
+</listitem><listitem><para><bold><ref refid="state__machine_8cpp" kindref="compound">state_machine.cpp</ref>:</bold> Send a <emphasis>new</emphasis> goal/objective to the <emphasis><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></emphasis> actoin server</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md6">
+<title>Coppelia scene</title>
+<para><itemizedlist>
+<listitem><para>RobotnikScene.ttt: A Coppelia scene containing a robot interacting with the simulation. The mobile robot used in this assignment was the Robotnik Summit XL140701 without obstacles in the environment.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md7">
+<title>Running the code</title>
+<para>To compile, first it is necessary to source your ROS version. <programlisting><codeline><highlight class="normal">source<sp/>ros.sh</highlight></codeline>
+</programlisting></para>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md8">
+<title>Launching the UDF mobile robot</title>
+<para><itemizedlist>
+<listitem><para><bold>sim.launch:</bold> Contain all the nodes necessary to launch the simulation, the Gazebo environment will start automaticaly <programlisting><codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>sim.launch</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md9">
+<title>Launching the Coppelia mobile robot</title>
+<para>Don&apos;t forget to start the CoppeliaSim in parallel with your ros.sh correctly sourced and the &apos;play&apos; button pressed.</para>
+<para><itemizedlist>
+<listitem><para><bold>Robotnik_coppelia_scene.launch:</bold> Contain all the nodes necessary to launch the simulation, the Gazebo environment will start automaticaly <programlisting><codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>Robotnik_coppelia_scene.launch</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md10">
+<title>Futher information</title>
+<para>To have acess to the documentation of this project, you need to go to:<itemizedlist>
+<listitem><para>folder <computeroutput>docs</computeroutput></para>
+</listitem><listitem><para>folder <computeroutput>html</computeroutput></para>
+</listitem><listitem><para>double click on the file <computeroutput>files.html</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

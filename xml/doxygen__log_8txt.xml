@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="doxygen__log_8txt" kind="file" language="C++">
+    <compoundname>doxygen_log.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>include<sp/>files...</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>example<sp/>files...</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>images...</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>dot<sp/>files...</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>msc<sp/>files...</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>dia<sp/>files...</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>to<sp/>exclude</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">Searching<sp/>INPUT<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>to<sp/>process...</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/action</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/coppelia_scenes</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/docs</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/launch</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/srv</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">Searching<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>files<sp/>in<sp/>directory<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/urdf</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">Reading<sp/>and<sp/>parsing<sp/>tag<sp/>files</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">Parsing<sp/>files</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/CMakeLists.txt...</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/CMakeLists.txt...</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/README.md...</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">Reading<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/position_service.cpp...</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/position_service.cpp...</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">Preprocessing<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/state_machine.cpp...</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">Parsing<sp/>file<sp/>/home/anderson/my_ros_ws/src/rt2_assignment1/src/state_machine.cpp...</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">Building<sp/>group<sp/>list...</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">Building<sp/>directory<sp/>list...</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">Building<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">list...</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">Building<sp/>file<sp/>list...</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">Building<sp/>class<sp/>list...</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">Computing<sp/>nesting<sp/>relations<sp/>for<sp/>classes...</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">Associating<sp/>documentation<sp/>with<sp/>classes...</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">Building<sp/>example<sp/>list...</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">Searching<sp/>for<sp/>enumerations...</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">Searching<sp/>for<sp/>documented<sp/>typedefs...</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">Searching<sp/>for<sp/>members<sp/>imported<sp/>via<sp/>using<sp/>declarations...</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">Searching<sp/>for<sp/>included<sp/>using<sp/>directives...</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">Searching<sp/>for<sp/>documented<sp/>variables...</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">Building<sp/>interface<sp/>member<sp/>list...</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">Building<sp/>member<sp/>list...</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">Searching<sp/>for<sp/>friends...</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">Searching<sp/>for<sp/>documented<sp/>defines...</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">Computing<sp/>class<sp/>inheritance<sp/>relations...</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">Computing<sp/>class<sp/>usage<sp/>relations...</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">Flushing<sp/>cached<sp/>template<sp/>relations<sp/>that<sp/>have<sp/>become<sp/>invalid...</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">Computing<sp/>class<sp/>relations...</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">Add<sp/>enum<sp/>values<sp/>to<sp/>enums...</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">Searching<sp/>for<sp/>member<sp/>function<sp/>documentation...</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">Creating<sp/>members<sp/>for<sp/>template<sp/>instances...</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">Building<sp/>page<sp/>list...</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">Search<sp/>for<sp/><ref refid="position__service_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref><sp/>page...</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">Computing<sp/>page<sp/>relations...</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">Determining<sp/>the<sp/>scope<sp/>of<sp/>groups...</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">Sorting<sp/>lists...</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">Determining<sp/>which<sp/>enums<sp/>are<sp/>documented</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">Computing<sp/>member<sp/>relations...</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">Building<sp/>full<sp/>member<sp/>lists<sp/>recursively...</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">Adding<sp/>members<sp/>to<sp/>member<sp/>groups.</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">Computing<sp/>member<sp/>references...</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">Inheriting<sp/>documentation...</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">Generating<sp/>disk<sp/>names...</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">Adding<sp/>source<sp/>references...</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">Adding<sp/>xrefitems...</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">Sorting<sp/>member<sp/>lists...</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">Setting<sp/>anonymous<sp/>enum<sp/>type...</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">Computing<sp/>dependencies<sp/>between<sp/>directories...</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">Generating<sp/>citations<sp/>page...</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">Counting<sp/>members...</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">Counting<sp/>data<sp/>structures...</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">Resolving<sp/>user<sp/>defined<sp/>references...</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">Finding<sp/>anchors<sp/>and<sp/>sections<sp/>in<sp/>the<sp/>documentation...</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">Transferring<sp/>function<sp/>references...</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">Combining<sp/>using<sp/>relations...</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">Adding<sp/>members<sp/>to<sp/>index<sp/>pages...</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">Correcting<sp/>members<sp/>for<sp/>VHDL...</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">Generating<sp/>style<sp/>sheet...</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">Generating<sp/>search<sp/>indices...</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">Generating<sp/>example<sp/>documentation...</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">Generating<sp/>file<sp/>sources...</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">Generating<sp/>file<sp/>documentation...</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>CMakeLists.txt...</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>README.md...</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/<ref refid="namespacego__to__point" kindref="compound">go_to_point</ref>.py...</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>scripts/<ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>.py...</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>src/position_service.cpp...</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>file<sp/>src/state_machine.cpp...</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">Generating<sp/>page<sp/>documentation...</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>page<sp/>md_README...</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">Generating<sp/>group<sp/>documentation...</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">Generating<sp/>class<sp/>documentation...</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">Generating<sp/>namespace<sp/>index...</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/><ref refid="namespacego__to__point" kindref="compound">go_to_point</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">Generating<sp/>docs<sp/>for<sp/>namespace<sp/><ref refid="namespaceuser__interface" kindref="compound">user_interface</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">Generating<sp/>graph<sp/>info<sp/>page...</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">Generating<sp/>directory<sp/>documentation...</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">Generating<sp/>index<sp/>page...</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">Generating<sp/>page<sp/>index...</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">Generating<sp/>module<sp/>index...</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">Generating<sp/>namespace<sp/>index...</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">Generating<sp/>namespace<sp/>member<sp/>index...</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">Generating<sp/>annotated<sp/>compound<sp/>index...</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">Generating<sp/>alphabetical<sp/>compound<sp/>index...</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">Generating<sp/>hierarchical<sp/>class<sp/>index...</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">Generating<sp/>graphical<sp/>class<sp/>hierarchy...</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">Generating<sp/>member<sp/>index...</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">Generating<sp/>file<sp/>index...</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">Generating<sp/>file<sp/>member<sp/>index...</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">Generating<sp/>example<sp/>index...</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">finalizing<sp/>index<sp/>lists...</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">writing<sp/>tag<sp/>file...</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">Running<sp/>plantuml<sp/>with<sp/>JAVA...</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">Running<sp/>dot...</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">Generating<sp/>dot<sp/>graphs<sp/>using<sp/>5<sp/>parallel<sp/>threads...</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">Running<sp/>dot<sp/>for<sp/>graph<sp/>1/5</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">Running<sp/>dot<sp/>for<sp/>graph<sp/>2/5</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">Running<sp/>dot<sp/>for<sp/>graph<sp/>3/5</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">Running<sp/>dot<sp/>for<sp/>graph<sp/>4/5</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">Running<sp/>dot<sp/>for<sp/>graph<sp/>5/5</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">Patching<sp/>output<sp/>file<sp/>1/4</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">Patching<sp/>output<sp/>file<sp/>2/4</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">Patching<sp/>output<sp/>file<sp/>3/4</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">Patching<sp/>output<sp/>file<sp/>4/4</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">lookup<sp/>cache<sp/>used<sp/>35/65536<sp/>hits=39<sp/>misses=37</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">finished...</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">***<sp/>Doxygen<sp/>has<sp/>finished</highlight></codeline>
+    </programlisting>
+    <location file="docs/doxygen_log.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceuser__interface" kind="namespace" language="Python">
+    <compoundname>user_interface</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceuser__interface_1ac26bdb296b6776907b72c17ce5a1b24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def user_interface.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the &apos;rospy &lt;http://wiki.ros.org/rospy/&gt;&apos;_ module.
+
+The user message is passed to the service 
+``user_interface``, 
+advertised by :mod:`go_to_point`.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/user_interface.py" line="19" column="1" bodyfile="scripts/user_interface.py" bodystart="19" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: user_interface
+   :platform: Unix
+   :synopsis: Python module for the user Interface    
+.. module author:: Anderson Siqueira 
+    
+This node implements an user interface
+  
+Service:
+   /user_interface    
+</verbatim> </para>
+    </detaileddescription>
+    <location file="scripts/user_interface.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

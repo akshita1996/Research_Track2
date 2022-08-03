@@ -1,0 +1,53 @@
+\hypertarget{user__interface_8py}{}\doxysection{scripts/user\+\_\+interface.py File Reference}
+\label{user__interface_8py}\index{scripts/user\_interface.py@{scripts/user\_interface.py}}
+
+
+Python module for node implements an user interface.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{user__interface_8py_ac26bdb296b6776907b72c17ce5a1b24a}\label{user__interface_8py_ac26bdb296b6776907b72c17ce5a1b24a}} 
+def {\bfseries user\+\_\+interface.\+main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{user__interface_8py_a74abdf5fb275d0e26edfd7dd1c1698a2}{user\+\_\+interface.\+ui\+\_\+client}} = rospy.\+Service\+Proxy(\textquotesingle{}/\mbox{\hyperlink{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}{user\+\_\+interface}}\textquotesingle{}, Command)
+\begin{DoxyCompactList}\small\item\em This function initializes the R\+OS node and waits for the user to insert {\itshape start} or {\itshape stop} to control the robot, by relying on the \textquotesingle{}rospy \href{http://wiki.ros.org/rospy/}{\texttt{ http\+://wiki.\+ros.\+org/rospy/}}\textquotesingle{}\+\_\+ module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{user__interface_8py_ac078be233beb6493b6069df650af0fc4}\label{user__interface_8py_ac078be233beb6493b6069df650af0fc4}} 
+{\bfseries user\+\_\+interface.\+rate} = rospy.\+Rate(20)
+\item 
+\mbox{\Hypertarget{user__interface_8py_a056c9b8f69caa9776c573dbb14434cd1}\label{user__interface_8py_a056c9b8f69caa9776c573dbb14434cd1}} 
+{\bfseries user\+\_\+interface.\+x} = int(input(\char`\"{}\textbackslash{}n\+Press 1 to start the robot \char`\"{}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Python module for node implements an user interface. 
+
+\begin{DoxyAuthor}{Author}
+Anderson Siqueira de Andrade 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+03/08/2021
+\end{DoxyDate}
+Service\+: /user\+\_\+interface ~\newline
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{user__interface_8py_a74abdf5fb275d0e26edfd7dd1c1698a2}\label{user__interface_8py_a74abdf5fb275d0e26edfd7dd1c1698a2}} 
+\index{user\_interface.py@{user\_interface.py}!ui\_client@{ui\_client}}
+\index{ui\_client@{ui\_client}!user\_interface.py@{user\_interface.py}}
+\doxysubsubsection{\texorpdfstring{ui\_client}{ui\_client}}
+{\footnotesize\ttfamily user\+\_\+interface.\+ui\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}/\mbox{\hyperlink{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}{user\+\_\+interface}}\textquotesingle{}, Command)}
+
+
+
+This function initializes the R\+OS node and waits for the user to insert {\itshape start} or {\itshape stop} to control the robot, by relying on the \textquotesingle{}rospy \href{http://wiki.ros.org/rospy/}{\texttt{ http\+://wiki.\+ros.\+org/rospy/}}\textquotesingle{}\+\_\+ module. 
+
+The user message is passed to the service {\ttfamily user\+\_\+interface}, advertised by \+:mod\+:{\ttfamily go\+\_\+to\+\_\+point}. 

@@ -1,0 +1,36 @@
+\hypertarget{namespaceuser__interface}{}\doxysection{user\+\_\+interface Namespace Reference}
+\label{namespaceuser__interface}\index{user\_interface@{user\_interface}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceuser__interface_ac26bdb296b6776907b72c17ce5a1b24a}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: user_interface
+   :platform: Unix
+   :synopsis: Python module for the user Interface    
+.. module author:: Anderson Siqueira 
+    
+This node implements an user interface
+  
+Service:
+   /user_interface    
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceuser__interface_ac26bdb296b6776907b72c17ce5a1b24a}\label{namespaceuser__interface_ac26bdb296b6776907b72c17ce5a1b24a}} 
+\index{user\_interface@{user\_interface}!main@{main}}
+\index{main@{main}!user\_interface@{user\_interface}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def user\+\_\+interface.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function initializes the ROS node and waits for the user to insert *start* or *stop* to control the robot, by relying on the 'rospy <http://wiki.ros.org/rospy/>'_ module.
+
+The user message is passed to the service 
+``user_interface``, 
+advertised by :mod:`go_to_point`.
+\end{DoxyVerb}
+ 

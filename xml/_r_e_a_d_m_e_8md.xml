@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>First<sp/>Assignment<sp/>of<sp/>the<sp/>Research<sp/>Track<sp/>2<sp/>course<sp/>(Robotics<sp/>Engineering<sp/>/<sp/>JEMARO,<sp/>Unige)</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>package<sp/>contains<sp/>the<sp/>nodes<sp/>and<sp/>the<sp/>simulation<sp/>environment<sp/>for<sp/>controlling<sp/>a<sp/>mobile<sp/>robot<sp/>in<sp/>the<sp/>Gazebo<sp/>simulation<sp/>environment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>contents</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Requirements](#requirements)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[General<sp/>info](#general-info)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Description<sp/>of<sp/>the<sp/>system](#description-of-the-system)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Codes<sp/>and<sp/>nodes](#codes-and-nodes)<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Coppelia<sp/>scene](#coppelia-scene)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Running<sp/>the<sp/>code](#running-the-code)<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Futher<sp/>information](#futher-information)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>properly<sp/>oberserve<sp/>and<sp/>run<sp/>correctly<sp/>the<sp/>behaviour<sp/>of<sp/>the<sp/>mobile<sp/>robot<sp/>in<sp/>your<sp/>machine,<sp/>it&apos;s<sp/>necessary<sp/>to<sp/>have<sp/>in<sp/>your<sp/>linux<sp/>system:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Ubuntu<sp/>20.04<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ROS<sp/>Noetic</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ROS2<sp/>Foxy</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Python3</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Gazebo<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>General<sp/>info</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>package<sp/>is<sp/>responsible<sp/>to<sp/>control<sp/>a<sp/>mobile<sp/>robot<sp/>when<sp/>receives<sp/>a<sp/>`go_to_point`<sp/>command<sp/>from<sp/>the<sp/>user.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Description<sp/>of<sp/>the<sp/>system</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>launch<sp/>file<sp/>will<sp/>open<sp/>and<sp/>start:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>The<sp/>simulation<sp/>environment</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>The<sp/>node<sp/>`random_position_server`,<sp/>which<sp/>implements<sp/>a<sp/>random<sp/>position<sp/>service</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>The<sp/>node<sp/>`go_to_point`,<sp/>which<sp/>implements<sp/>a<sp/>service<sp/>to<sp/>drive<sp/>a<sp/>robot<sp/>toward<sp/>a<sp/>point<sp/>in<sp/>the<sp/>environment</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>The<sp/>node<sp/>`state_machine`,<sp/>which<sp/>implements<sp/>a<sp/>service<sp/>to<sp/>start<sp/>or<sp/>stop<sp/>the<sp/>robot,<sp/>and<sp/>calls<sp/>the<sp/>other<sp/>two<sp/>services<sp/>to<sp/>drive<sp/>the<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>The<sp/>node<sp/>`user_interface`,<sp/>which<sp/>asks<sp/>the<sp/>user<sp/>to<sp/>start/stop<sp/>the<sp/>robot,<sp/>and<sp/>calls<sp/>the<sp/>service<sp/>implemented<sp/>in<sp/>the<sp/>state_machine<sp/>node</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>The<sp/>service<sp/>implemented<sp/>in<sp/>the<sp/>`go_to_point`<sp/>node<sp/>is<sp/>able<sp/>to<sp/>drive<sp/>the<sp/>robot<sp/>towards<sp/>a<sp/>certain<sp/>position<sp/>in<sp/>space<sp/>(x,<sp/>y)<sp/>and<sp/>with<sp/>a<sp/>certain<sp/>angle<sp/>(theta)</highlight></codeline>
+<codeline><highlight class="normal">7.<sp/>The<sp/>service<sp/>implemented<sp/>in<sp/>the<sp/>`random_position_server`<sp/>node<sp/>replies<sp/>with<sp/>random<sp/>values<sp/>for<sp/>x,<sp/>y,<sp/>and<sp/>theta,<sp/>where<sp/>x<sp/>and<sp/>y<sp/>should<sp/>be<sp/>limited<sp/>between<sp/>some<sp/>min<sp/>and<sp/>max<sp/>values</highlight></codeline>
+<codeline><highlight class="normal">8.<sp/>The<sp/>service<sp/>implemented<sp/>in<sp/>the<sp/>robot<sp/>`state_machine`<sp/>node<sp/>gives<sp/>the<sp/>possibility<sp/>to<sp/>start<sp/>or<sp/>stop<sp/>the<sp/>robot<sp/>behaviour.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Because<sp/>our<sp/>user<sp/>request<sp/>is<sp/>implemented<sp/>as<sp/>an<sp/>action,<sp/>it<sp/>can<sp/>be<sp/>preempted,<sp/>this<sp/>way<sp/>we<sp/>can<sp/>stop<sp/>the<sp/>robot<sp/>at<sp/>any<sp/>time<sp/>during<sp/>the<sp/>simulation<sp/>and<sp/>then<sp/>restart<sp/>it<sp/>with<sp/>a<sp/>new<sp/>goal.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![](docs/rosgraph.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Codes<sp/>e<sp/>nodes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>package,<sp/>at<sp/>the<sp/>scripts<sp/>folder,<sp/>it&apos;s<sp/>possible<sp/>to<sp/>find<sp/>2<sp/>&apos;.py&apos;<sp/>extension<sp/>files,<sp/>each<sp/>one<sp/>with<sp/>it&apos;s<sp/>own<sp/>node:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**go_to_point.py:**<sp/>A<sp/>action<sp/>server<sp/>that<sp/>controls<sp/>the<sp/>robot<sp/>speed<sp/>depending<sp/>on<sp/>random<sp/>generated<sp/>goal;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**user_interface.py:**<sp/>A<sp/>command<sp/>that<sp/>sends<sp/>the<sp/>request<sp/>to<sp/>*start*<sp/>or<sp/>*stop*<sp/>the<sp/>*go_to_point<sp/>node*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>package,<sp/>at<sp/>the<sp/>src<sp/>folder,<sp/>it&apos;s<sp/>possible<sp/>to<sp/>find<sp/>2<sp/>&apos;.cpp&apos;<sp/>extension<sp/>files,<sp/>each<sp/>one<sp/>with<sp/>it&apos;s<sp/>own<sp/>node:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**position_service.cpp:**<sp/>It<sp/>generates<sp/>a<sp/>random<sp/>position<sp/>for<sp/>x,<sp/>y<sp/>and<sp/>theta<sp/>when<sp/>requested.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**state_machine.cpp:**<sp/>Send<sp/>a<sp/>*new*<sp/>goal/objective<sp/>to<sp/>the<sp/>*go_to_point*<sp/>actoin<sp/>server</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Coppelia<sp/>scene</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>RobotnikScene.ttt:<sp/>A<sp/>Coppelia<sp/>scene<sp/>containing<sp/>a<sp/>robot<sp/>interacting<sp/>with<sp/>the<sp/>simulation.<sp/>The<sp/>mobile<sp/>robot<sp/>used<sp/>in<sp/>this<sp/>assignment<sp/>was<sp/>the<sp/>Robotnik<sp/>Summit<sp/>XL140701<sp/>without<sp/>obstacles<sp/>in<sp/>the<sp/>environment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Running<sp/>the<sp/>code</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>compile,<sp/>first<sp/>it<sp/>is<sp/>necessary<sp/>to<sp/>source<sp/>your<sp/>ROS<sp/>version.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>ros.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Launching<sp/>the<sp/>UDF<sp/>mobile<sp/>robot</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**sim.launch:**<sp/>Contain<sp/>all<sp/>the<sp/>nodes<sp/>necessary<sp/>to<sp/>launch<sp/>the<sp/>simulation,<sp/>the<sp/>Gazebo<sp/>environment<sp/>will<sp/>start<sp/>automaticaly</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>sim.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Launching<sp/>the<sp/>Coppelia<sp/>mobile<sp/>robot</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Don&apos;t<sp/>forget<sp/>to<sp/>start<sp/>the<sp/>CoppeliaSim<sp/>in<sp/>parallel<sp/>with<sp/>your<sp/>ros.sh<sp/>correctly<sp/>sourced<sp/>and<sp/>the<sp/>&apos;play&apos;<sp/>button<sp/>pressed.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Robotnik_coppelia_scene.launch:**<sp/>Contain<sp/>all<sp/>the<sp/>nodes<sp/>necessary<sp/>to<sp/>launch<sp/>the<sp/>simulation,<sp/>the<sp/>Gazebo<sp/>environment<sp/>will<sp/>start<sp/>automaticaly</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>Robotnik_coppelia_scene.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Futher<sp/>information</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>have<sp/>acess<sp/>to<sp/>the<sp/>documentation<sp/>of<sp/>this<sp/>project,<sp/>you<sp/>need<sp/>to<sp/>go<sp/>to:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>folder<sp/>`docs`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>folder<sp/>`html`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>double<sp/>click<sp/>on<sp/>the<sp/>file<sp/>`files.html`</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

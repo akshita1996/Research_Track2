@@ -1,0 +1,83 @@
+The package contains the nodes and the simulation environment for controlling a mobile robot in the Gazebo simulation environment.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Table of contents}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{\#requirements}{\texttt{ Requirements}}
+\item \href{\#general-info}{\texttt{ General info}}
+\item \href{\#description-of-the-system}{\texttt{ Description of the system}}
+\item \href{\#codes-and-nodes}{\texttt{ Codes and nodes}}
+\item \href{\#coppelia-scene}{\texttt{ Coppelia scene}}
+\item \href{\#running-the-code}{\texttt{ Running the code}}
+\item \href{\#futher-information}{\texttt{ Futher information}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Requirements}\label{md__r_e_a_d_m_e_autotoc_md2}
+To properly oberserve and run correctly the behaviour of the mobile robot in your machine, it\textquotesingle{}s necessary to have in your linux system\+:
+\begin{DoxyItemize}
+\item Ubuntu 20.\+04
+\item R\+OS Noetic
+\item R\+O\+S2 Foxy
+\item Python3
+\item Gazebo
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{General info}\label{md__r_e_a_d_m_e_autotoc_md3}
+This package is responsible to control a mobile robot when receives a {\ttfamily \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}}} command from the user.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Description of the system}\label{md__r_e_a_d_m_e_autotoc_md4}
+The launch file will open and start\+:
+\begin{DoxyEnumerate}
+\item The simulation environment
+\item The node {\ttfamily random\+\_\+position\+\_\+server}, which implements a random position service
+\item The node {\ttfamily \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}}}, which implements a service to drive a robot toward a point in the environment
+\item The node {\ttfamily state\+\_\+machine}, which implements a service to start or stop the robot, and calls the other two services to drive the robot
+\item The node {\ttfamily \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}}}, which asks the user to start/stop the robot, and calls the service implemented in the state\+\_\+machine node
+\item The service implemented in the {\ttfamily \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}}} node is able to drive the robot towards a certain position in space (x, y) and with a certain angle (theta)
+\item The service implemented in the {\ttfamily random\+\_\+position\+\_\+server} node replies with random values for x, y, and theta, where x and y should be limited between some min and max values
+\item The service implemented in the robot {\ttfamily state\+\_\+machine} node gives the possibility to start or stop the robot behaviour.
+\end{DoxyEnumerate}
+
+Because our user request is implemented as an action, it can be preempted, this way we can stop the robot at any time during the simulation and then restart it with a new goal.
+
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Codes e nodes}\label{md__r_e_a_d_m_e_autotoc_md5}
+In this package, at the scripts folder, it\textquotesingle{}s possible to find 2 \textquotesingle{}.py\textquotesingle{} extension files, each one with it\textquotesingle{}s own node\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{go\+\_\+to\+\_\+point.\+py\+:}} A action server that controls the robot speed depending on random generated goal;
+\item {\bfseries{user\+\_\+interface.\+py\+:}} A command that sends the request to {\itshape start} or {\itshape stop} the {\itshape \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}} node}
+\end{DoxyItemize}
+
+In this package, at the src folder, it\textquotesingle{}s possible to find 2 \textquotesingle{}.cpp\textquotesingle{} extension files, each one with it\textquotesingle{}s own node\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}}\+:}} It generates a random position for x, y and theta when requested.
+\item {\bfseries{\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}}\+:}} Send a {\itshape new} goal/objective to the {\itshape \mbox{\hyperlink{namespacego__to__point}{go\+\_\+to\+\_\+point}}} actoin server
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Coppelia scene}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Robotnik\+Scene.\+ttt\+: A Coppelia scene containing a robot interacting with the simulation. The mobile robot used in this assignment was the Robotnik Summit X\+L140701 without obstacles in the environment.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Running the code}\label{md__r_e_a_d_m_e_autotoc_md7}
+To compile, first it is necessary to source your R\+OS version. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source ros.sh}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{Launching the U\+D\+F mobile robot}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item {\bfseries{sim.\+launch\+:}} Contain all the nodes necessary to launch the simulation, the Gazebo environment will start automaticaly 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch rt2\_assignment1 sim.launch}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Launching the Coppelia mobile robot}\label{md__r_e_a_d_m_e_autotoc_md9}
+Don\textquotesingle{}t forget to start the Coppelia\+Sim in parallel with your ros.\+sh correctly sourced and the \textquotesingle{}play\textquotesingle{} button pressed.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Robotnik\+\_\+coppelia\+\_\+scene.\+launch\+:}} Contain all the nodes necessary to launch the simulation, the Gazebo environment will start automaticaly 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch rt2\_assignment1 Robotnik\_coppelia\_scene.launch}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Futher information}\label{md__r_e_a_d_m_e_autotoc_md10}
+To have acess to the documentation of this project, you need to go to\+:
+\begin{DoxyItemize}
+\item folder {\ttfamily docs}
+\item folder {\ttfamily html}
+\item double click on the file {\ttfamily files.\+html} 
+\end{DoxyItemize}
